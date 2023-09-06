@@ -18,7 +18,7 @@ module.exports = {
             throw new Error('User not found');
         }
 
-        // Compare the provided password with the stored hashed password.
+        // I Compare the provided password with the stored hashed password.
         const validPassword = await bcrypt.compare(args.password, user.password);
 
         if (!validPassword) {

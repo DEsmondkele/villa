@@ -8,25 +8,23 @@ const { graphqlHTTP } = require('express-graphql'); // Import express-graphql
 
 const app = express();
 
-// Connect to your MongoDB database here
+// MongoDB database connection here
 connect('mongodb://localhost:27017/villas', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
 
-// ... other middleware setup
 
 // GraphQL setup
 const schema = require('./graphql/schema'); // Import your GraphQL schema
 app.use(
     '/api/v1/villa',
     graphqlHTTP({
-      schema,
-      graphiql: true, // Enable the GraphQL interface for testing
+        schema,
+        graphiql: true, // Enabling the GraphQL interface for testing
     })
 );
 
-// ... other routes and error handling
 
 // view engine setup
 app.set('view engine', 'pug');
