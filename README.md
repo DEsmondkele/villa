@@ -12,8 +12,6 @@ Brief project description and purpose.
 - [Installation](#installation)
 - [Configuration](#configuration)
 - [Usage](#usage)
-- [Contributing](#contributing)
-
 
 ---
 
@@ -88,7 +86,7 @@ npm install
 cd ../Service2
 npm install
 
-Configuration
+# Configuration
 Service 1 Configuration
 Service 1 requires configuration for MongoDB and JWT authentication.
 
@@ -107,6 +105,8 @@ file storage locations, etc. Refer to Service2/app2.js and any configuration fil
 `npm start`
 
 The GraphQL server will run at http://localhost:4000/graphql. You can access the GraphiQL interface for testing and use Postman for API testing.
+
+# usage
 
 1. Test the Signup and Login mutations using GraphQL queries.
 

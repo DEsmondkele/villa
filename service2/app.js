@@ -3,10 +3,10 @@ const fs = require('fs');
 const path = require('path');
 
 const app = express();
-const port = 4001; // Choose an appropriate port
+const port = 4001;
 
 app.get('/graphql-schema', (req, res) => {
-    // Read the JSON file and send it as a response
+    // Reading the JSON file and sending it as a response
     const schemaPath = path.join(__dirname, 'graphql/types/User.json');
     fs.readFile(schemaPath, 'utf8', (err, data) => {
         if (err) {

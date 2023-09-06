@@ -4,7 +4,7 @@ const loginMutation = require('./mutations/login');
 const UserType = require('./types/UserType');
 const User = require('../../service2/models/User');
 
-// Define the RootQuery
+//RootQuery
 const RootQuery = new GraphQLObjectType({
     name: 'RootQueryType',
     fields: {
@@ -20,7 +20,7 @@ const RootQuery = new GraphQLObjectType({
 });
 
 
-// Define the Root Mutation
+//the Root Mutation
 const RootMutation = new GraphQLObjectType({
     name: 'RootMutationType',
     fields: {
@@ -29,7 +29,7 @@ const RootMutation = new GraphQLObjectType({
     },
 });
 
-// Define the GraphQL schema
+//the GraphQL schema
 module.exports = new GraphQLSchema({
     query: RootQuery,
     mutation: RootMutation,
