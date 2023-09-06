@@ -19,24 +19,26 @@ connect('mongodb://localhost:27017/villas', {
 // GraphQL setup
 const schema = require('./graphql/schema'); // Import your GraphQL schema
 app.use(
-    'api/v1/villa',
+    '/api/v1/villa',
     graphqlHTTP({
       schema,
-      graphiql: true, // Enable the GraphiQL interface for testing
+      graphiql: true, // Enable the GraphQL interface for testing
     })
 );
 
 // ... other routes and error handling
 
 // view engine setup
-app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
+
+app.set('views', path.join(__dirname, '../views'));
+
 
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, '../public')));
 
 // app.use('/', indexRouter);
 // app.use('/users', usersRouter);
