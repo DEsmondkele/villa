@@ -1,0 +1,14 @@
+{
+  "name": "User",
+  "fields": {
+    "id": {
+      "type": "String"
+    },
+    "username": {
+      "type": "String"
+    },
+    "email": {
+      "type": "String"
+    }
+  }
+}
